@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu — La Pagoda · Ristorante cinese</title>
+  <meta name="description" content="Il menu de La Pagoda: antipasti, primi piatti, riso e noodles, secondi, specialità della casa, dolci e bevande della cucina cinese. Consulta le categorie e scopri i piatti.">
+  <meta name="theme-color" content="#171717">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="La Pagoda">
+  <meta property="og:title" content="Il menu — La Pagoda">
+  <meta property="og:description" content="Antipasti, riso e noodles, piatti al wok e dolci: scopri il menu del ristorante cinese La Pagoda.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=1200&h=630&q=75">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="La Pagoda, torna alla home">
+        <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M20 2.5V7"/>
+          <path d="M9.5 13.5C13.5 12.9 17.1 10.5 20 7c2.9 3.5 6.5 5.9 10.5 6.5"/>
+          <path d="M13.5 13.5V18M26.5 13.5V18"/>
+          <path d="M5.5 23c4-.6 6.5-2.6 8-5h13c1.5 2.4 4 4.4 8 5"/>
+          <path d="M9.5 23v5M30.5 23v5"/>
+          <path d="M2.5 32.5c4-.6 6-2.4 7-4.5h21c1 2.1 3 3.9 7 4.5"/>
+          <path d="M6.5 32.5v5h27v-5"/>
+          <path d="M17.5 37.5V34h5v3.5"/>
+        </svg>
+        <span class="logo__text">
+          <span class="logo__name">La Pagoda</span>
+          <span class="logo__tag">Ristorante cinese</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Apri il menu di navigazione">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav" id="primary-nav" aria-label="Navigazione principale">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="index.html#specialita">Specialità</a></li>
+          <li><a class="nav__link" href="index.html#storia">La storia</a></li>
+          <li><a class="nav__link" href="menu.html" aria-current="page">Menu</a></li>
+          <li><a class="nav__link" href="galleria.html">Galleria</a></li>
+          <li><a class="nav__link" href="index.html#contatti">Contatti</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm nav__cta" href="index.html#contatti">Prenota un tavolo</a>
+        <div class="nav__footer">
+          <a data-config="phone">[Numero di telefono]</a>
+          <a data-config="email">[Indirizzo email]</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <main id="main">
+
+    <!-- ===================== HERO SECONDARIO ===================== -->
+    <section class="page-hero" id="top" aria-labelledby="page-title">
+      <div class="hero__media">
+        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=1600&h=900&q=75"
+             srcset="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=900&h=900&q=70 900w,
+                     https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=1600&h=900&q=75 1600w,
+                     https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=2400&h=1350&q=75 2400w"
+             sizes="100vw" width="1600" height="900"
+             alt="Noodles saltati con gamberi e pomodorini in una padella scura"
+             fetchpriority="high" decoding="async">
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Percorso di navigazione">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><span aria-current="page">Menu</span></li>
+          </ol>
+        </nav>
+        <h1 id="page-title">Il nostro <em>menu</em></h1>
+        <p class="lead">I grandi classici della cucina cinese, dagli antipasti al vapore ai piatti saltati al wok: un percorso da comporre e condividere.</p>
+      </div>
+    </section>
+
+    <!-- ===================== MENU ===================== -->
+    <!--
+      COME AGGIORNARE IL MENU
+      - Ogni categoria è una <section class="menu-cat" data-category="..."> .
+        Il valore di data-category deve corrispondere a data-filter del pulsante.
+      - Ogni piatto è un <li class="menu-item" data-count-item>. Per un piatto con foto
+        aggiungere la classe "menu-item--photo" e un <img class="menu-item__img">.
+      - Prezzi: sostituire "€ —" con il prezzo reale (es. € 8,50) e rimuovere lo span "prezzo da definire".
+      - Indicatori (SOLO se verificati), da inserire dopo la descrizione:
+          <ul class="menu-item__tags" role="list">
+            <li class="tag tag--veg">Vegetariano</li>
+            <li class="tag tag--spicy">Piccante</li>
+            <li class="tag tag--allergen">Allergeni: glutine, soia</li>
+          </ul>
+      PIATTI, DESCRIZIONI E PREZZI QUI SOTTO SONO DIMOSTRATIVI.
+    -->
+    <section class="menu-page" aria-labelledby="menu-intro-title">
+      <div class="container">
+        <div class="menu-page__intro">
+          <h2 id="menu-intro-title" class="reveal">Sapori da scoprire, <em>insieme</em></h2>
+          <p class="reveal" style="--delay:.08s">Scegli una categoria per consultare i piatti. Nella cucina cinese si mangia condividendo: ordina più portate e mettile al centro della tavola.</p>
+        </div>
+      </div>
+
+      <div class="filters" data-filter-group="menu">
+        <div class="container">
+          <ul class="filters__list" role="list" aria-label="Filtra il menu per categoria">
+            <li><button class="filter-btn" type="button" data-filter="all" aria-pressed="true">Tutti</button></li>
+            <li><button class="filter-btn" type="button" data-filter="antipasti" aria-pressed="false">Antipasti</button></li>
+            <li><button class="filter-btn" type="button" data-filter="primi" aria-pressed="false">Primi piatti</button></li>
+            <li><button class="filter-btn" type="button" data-filter="riso-noodles" aria-pressed="false">Riso e noodles</button></li>
+            <li><button class="filter-btn" type="button" data-filter="secondi" aria-pressed="false">Secondi piatti</button></li>
+            <li><button class="filter-btn" type="button" data-filter="specialita" aria-pressed="false">Specialità della casa</button></li>
+            <li><button class="filter-btn" type="button" data-filter="dolci-bevande" aria-pressed="false">Dolci e bevande</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container" data-filter-target="menu" data-filter-scroll>
+        <p class="menu-status" data-filter-status="menu" data-noun="piatti" aria-live="polite"></p>
+
+        <!-- Antipasti -->
+        <section class="menu-cat" data-category="antipasti" data-count aria-labelledby="cat-antipasti">
+          <div class="menu-cat__head">
+            <span class="menu-cat__num">01</span>
+            <h2 id="cat-antipasti">Antipasti</h2>
+            <p>Piccoli assaggi per aprire il pasto, da condividere al centro della tavola.</p>
+          </div>
+          <ul class="menu-list" role="list">
+            <li class="menu-item menu-item--photo" data-count-item>
+              <img class="menu-item__img" src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?auto=format&fit=crop&w=200&h=200&q=70" width="200" height="200" loading="lazy" decoding="async" alt="Ravioli al vapore in una ciotola di legno con bacchette">
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Ravioli al vapore</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+            <li class="menu-item" data-count-item>
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Involtini primavera</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+            <li class="menu-item" data-count-item>
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Wonton fritti</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+            <li class="menu-item" data-count-item>
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Nuvole di drago</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Primi piatti -->
+        <section class="menu-cat" data-category="primi" data-count aria-labelledby="cat-primi">
+          <div class="menu-cat__head">
+            <span class="menu-cat__num">02</span>
+            <h2 id="cat-primi">Primi piatti</h2>
+            <p>Zuppe e preparazioni calde della tradizione.</p>
+          </div>
+          <ul class="menu-list" role="list">
+            <li class="menu-item menu-item--photo" data-count-item>
+              <img class="menu-item__img" src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&fit=crop&w=200&h=200&q=70" width="200" height="200" loading="lazy" decoding="async" alt="Ciotola di zuppa con noodles, carne e verdure a foglia">
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Zuppa con noodles</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+            <li class="menu-item" data-count-item>
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Zuppa agropiccante</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+            <li class="menu-item" data-count-item>
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Zuppa di wonton</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+            <li class="menu-item" data-count-item>
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Ravioli alla piastra</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Riso e noodles -->
+        <section class="menu-cat" data-category="riso-noodles" data-count aria-labelledby="cat-riso">
+          <div class="menu-cat__head">
+            <span class="menu-cat__num">03</span>
+            <h2 id="cat-riso">Riso e noodles</h2>
+            <p>Il cuore della tavola cinese: riso e noodles saltati al wok.</p>
+          </div>
+          <ul class="menu-list" role="list">
+            <li class="menu-item menu-item--photo" data-count-item>
+              <img class="menu-item__img" src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=200&h=200&q=70" width="200" height="200" loading="lazy" decoding="async" alt="Riso saltato con verdure ed erbe in una padella scura">
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Riso saltato alla cantonese</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+            <li class="menu-item menu-item--photo" data-count-item>
+              <img class="menu-item__img" src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=200&h=200&q=70" width="200" height="200" loading="lazy" decoding="async" alt="Noodles saltati con verdure su un piatto">
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Noodles saltati con verdure</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+            <li class="menu-item" data-count-item>
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Spaghetti di riso saltati</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+            <li class="menu-item" data-count-item>
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Riso bianco al vapore</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione da inserire]</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Secondi piatti -->
+        <section class="menu-cat" data-category="secondi" data-count aria-labelledby="cat-secondi">
+          <div class="menu-cat__head">
+            <span class="menu-cat__num">04</span>
+            <h2 id="cat-secondi">Secondi piatti</h2>
+            <p>Carne, pesce e verdure, cucinati secondo la tradizione.</p>
+          </div>
+          <ul class="menu-list" role="list">
+            <li class="menu-item menu-item--photo" data-count-item>
+              <img class="menu-item__img" src="https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=200&h=200&q=70" width="200" height="200" loading="lazy" decoding="async" alt="Bocconcini in salsa con broccoli e fette d'arancia, accompagnati da riso bianco">
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Pollo in agrodolce</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+            <li class="menu-item" data-count-item>
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Pollo alle mandorle</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+            <li class="menu-item" data-count-item>
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Manzo con funghi e bambù</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+            <li class="menu-item" data-count-item>
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Gamberi saltati</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Specialità della casa -->
+        <section class="menu-cat" data-category="specialita" data-count aria-labelledby="cat-specialita">
+          <div class="menu-cat__head">
+            <span class="menu-cat__num">05</span>
+            <h2 id="cat-specialita">Specialità della casa</h2>
+            <p>I piatti che raccontano la nostra cucina.</p>
+          </div>
+          <ul class="menu-list" role="list">
+            <li class="menu-item menu-item--photo" data-count-item>
+              <img class="menu-item__img" src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=200&h=200&q=70" width="200" height="200" loading="lazy" decoding="async" alt="Cestini di bambù con ravioli al vapore">
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">[Nome della specialità]</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+            <li class="menu-item" data-count-item>
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">[Nome della specialità]</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+            <li class="menu-item" data-count-item>
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">[Nome della specialità]</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Dolci e bevande -->
+        <section class="menu-cat" data-category="dolci-bevande" data-count aria-labelledby="cat-dolci">
+          <div class="menu-cat__head">
+            <span class="menu-cat__num">06</span>
+            <h2 id="cat-dolci">Dolci e bevande</h2>
+            <p>Per chiudere in dolcezza, accompagnati da tè e bevande.</p>
+          </div>
+          <ul class="menu-list" role="list">
+            <li class="menu-item" data-count-item>
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Gelato fritto</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+            <li class="menu-item" data-count-item>
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Frutta caramellata</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e ingredienti da inserire]</p>
+              </div>
+            </li>
+            <li class="menu-item" data-count-item>
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Tè al gelsomino</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione da inserire]</p>
+              </div>
+            </li>
+            <li class="menu-item" data-count-item>
+              <div>
+                <div class="menu-item__head">
+                  <h3 class="menu-item__name">Birra cinese</h3>
+                  <span class="menu-item__dots" aria-hidden="true"></span>
+                  <span class="menu-item__price">€ —<span class="visually-hidden"> (prezzo da definire)</span></span>
+                </div>
+                <p class="menu-item__desc">[Descrizione e formato da inserire]</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <aside class="menu-note" aria-label="Informazioni su allergeni">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>
+          <p>Per informazioni su allergeni e intolleranze, rivolgiti al nostro personale prima di ordinare: saremo lieti di indicarti la composizione di ogni piatto. Il menu e i prezzi possono variare.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===================== CTA FINALE ===================== -->
+    <section class="section cta-band theme-dark" aria-labelledby="cta-title">
+      <div class="container cta-band__inner">
+        <div class="cta-band__content">
+          <p class="eyebrow reveal">Informazioni e prenotazioni</p>
+          <h2 id="cta-title" class="reveal" style="--delay:.05s">Hai una domanda <em>sul menu?</em></h2>
+          <p class="lead reveal" style="--delay:.1s">Contattaci per prenotare un tavolo, organizzare una cena di gruppo o chiedere informazioni sui piatti.</p>
+        </div>
+        <div class="cta-band__actions reveal" style="--delay:.15s">
+          <a class="btn btn--primary" href="index.html#contatti" data-config="booking">
+            Prenota un tavolo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" data-config="phone" data-keep-text data-hide-empty>Chiama il ristorante</a>
+          <a class="btn btn--ghost" data-config="email" data-keep-text data-hide-empty>Scrivici un'email</a>
+          <a class="btn btn--ghost" href="index.html#contatti">Tutti i contatti</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="logo" href="index.html" aria-label="La Pagoda, torna alla home">
+            <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+              <path d="M20 2.5V7"/>
+              <path d="M9.5 13.5C13.5 12.9 17.1 10.5 20 7c2.9 3.5 6.5 5.9 10.5 6.5"/>
+              <path d="M13.5 13.5V18M26.5 13.5V18"/>
+              <path d="M5.5 23c4-.6 6.5-2.6 8-5h13c1.5 2.4 4 4.4 8 5"/>
+              <path d="M9.5 23v5M30.5 23v5"/>
+              <path d="M2.5 32.5c4-.6 6-2.4 7-4.5h21c1 2.1 3 3.9 7 4.5"/>
+              <path d="M6.5 32.5v5h27v-5"/>
+              <path d="M17.5 37.5V34h5v3.5"/>
+            </svg>
+            <span class="logo__text">
+              <span class="logo__name">La Pagoda</span>
+              <span class="logo__tag">Ristorante cinese</span>
+            </span>
+          </a>
+          <p>Cucina cinese della tradizione, ingredienti selezionati e piatti da condividere, in un ambiente accogliente.</p>
+          <ul class="social" data-social role="list" aria-label="Profili social">
+            <li><a data-social-link="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram (si apre in una nuova scheda)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+            <li><a data-social-link="facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook (si apre in una nuova scheda)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></a></li>
+            <li><a data-social-link="tripadvisor" target="_blank" rel="noopener noreferrer" aria-label="Tripadvisor (si apre in una nuova scheda)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="13" r="3.5"/><circle cx="17" cy="13" r="3.5"/><path d="M3 9c5-3 13-3 18 0M12 9.5V13"/></svg></a></li>
+          </ul>
+        </div>
+
+        <nav aria-label="Navigazione rapida">
+          <h2 class="footer__title">Esplora</h2>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#specialita">Specialità</a></li>
+            <li><a href="index.html#storia">La storia</a></li>
+            <li><a href="menu.html" aria-current="page">Menu</a></li>
+            <li><a href="galleria.html">Galleria</a></li>
+            <li><a href="index.html#contatti">Contatti</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="footer__title">Contatti</h2>
+          <div class="footer__contacts">
+            <address data-config="address">[Indirizzo del ristorante]</address>
+            <a data-config="phone">[Numero di telefono]</a>
+            <a data-config="email">[Indirizzo email]</a>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="footer__title">Orari</h2>
+          <ul class="hours" data-config="hours" role="list">
+            <li><span>Pranzo</span><span>[Da inserire]</span></li>
+            <li><span>Cena</span><span>[Da inserire]</span></li>
+            <li><span>Chiusura</span><span>[Da inserire]</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> La Pagoda. Tutti i diritti riservati.</p>
+        <ul class="footer__legal" role="list">
+          <li>P. IVA [da inserire]</li>
+          <li>Privacy Policy [da inserire]</li>
+          <li>Cookie Policy [da inserire]</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Torna su">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

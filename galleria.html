@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galleria — La Pagoda · Ristorante cinese</title>
+  <meta name="description" content="La galleria fotografica de La Pagoda: i piatti della cucina cinese, gli spazi del ristorante e i gesti della cucina. Sfoglia le immagini per categoria.">
+  <meta name="theme-color" content="#171717">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="La Pagoda">
+  <meta property="og:title" content="Galleria — La Pagoda">
+  <meta property="og:description" content="I nostri piatti, i nostri spazi, i dettagli che fanno la differenza.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1200&h=630&q=75">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="La Pagoda, torna alla home">
+        <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M20 2.5V7"/>
+          <path d="M9.5 13.5C13.5 12.9 17.1 10.5 20 7c2.9 3.5 6.5 5.9 10.5 6.5"/>
+          <path d="M13.5 13.5V18M26.5 13.5V18"/>
+          <path d="M5.5 23c4-.6 6.5-2.6 8-5h13c1.5 2.4 4 4.4 8 5"/>
+          <path d="M9.5 23v5M30.5 23v5"/>
+          <path d="M2.5 32.5c4-.6 6-2.4 7-4.5h21c1 2.1 3 3.9 7 4.5"/>
+          <path d="M6.5 32.5v5h27v-5"/>
+          <path d="M17.5 37.5V34h5v3.5"/>
+        </svg>
+        <span class="logo__text">
+          <span class="logo__name">La Pagoda</span>
+          <span class="logo__tag">Ristorante cinese</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Apri il menu di navigazione">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav" id="primary-nav" aria-label="Navigazione principale">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html">Home</a></li>
+          <li><a class="nav__link" href="index.html#specialita">Specialità</a></li>
+          <li><a class="nav__link" href="index.html#storia">La storia</a></li>
+          <li><a class="nav__link" href="menu.html">Menu</a></li>
+          <li><a class="nav__link" href="galleria.html" aria-current="page">Galleria</a></li>
+          <li><a class="nav__link" href="index.html#contatti">Contatti</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm nav__cta" href="index.html#contatti">Prenota un tavolo</a>
+        <div class="nav__footer">
+          <a data-config="phone">[Numero di telefono]</a>
+          <a data-config="email">[Indirizzo email]</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <main id="main">
+
+    <!-- ===================== HERO SECONDARIO ===================== -->
+    <section class="page-hero" id="top" aria-labelledby="page-title">
+      <div class="hero__media">
+        <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1600&h=900&q=75"
+             srcset="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=900&h=900&q=70 900w,
+                     https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1600&h=900&q=75 1600w,
+                     https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=2400&h=1350&q=75 2400w"
+             sizes="100vw" width="1600" height="900"
+             alt="Ravioli cinesi di diverse forme serviti in ciotole su un tavolo di legno"
+             fetchpriority="high" decoding="async">
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container page-hero__inner">
+        <nav class="breadcrumb" aria-label="Percorso di navigazione">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><span aria-current="page">Galleria</span></li>
+          </ol>
+        </nav>
+        <h1 id="page-title">La Pagoda, <em>da scoprire</em></h1>
+        <p class="lead">I nostri piatti, i nostri spazi, i dettagli che fanno la differenza.</p>
+      </div>
+    </section>
+
+    <!-- ===================== GALLERIA ===================== -->
+    <!--
+      COME SOSTITUIRE LE IMMAGINI
+      - Salvare le foto reali in una cartella (es. img/galleria/) in formato WebP o AVIF.
+      - Per ogni <li>: aggiornare data-category (piatti | ambiente | cucina),
+        l'href del link (versione grande, es. 1800px), src/width/height della miniatura,
+        il testo alternativo (alt) e la didascalia (data-caption + testo visibile).
+      LE FOTOGRAFIE ATTUALI SONO DIMOSTRATIVE (Unsplash).
+    -->
+    <section class="section gallery-page theme-dark" aria-labelledby="gallery-title">
+      <div class="container">
+        <h2 id="gallery-title" class="visually-hidden">Fotografie</h2>
+
+        <div class="gallery-page__bar">
+          <div class="filters filters--plain" data-filter-group="galleria">
+            <ul class="filters__list" role="list" aria-label="Filtra le fotografie per categoria">
+              <li><button class="filter-btn" type="button" data-filter="all" aria-pressed="true">Tutte</button></li>
+              <li><button class="filter-btn" type="button" data-filter="piatti" aria-pressed="false">Piatti</button></li>
+              <li><button class="filter-btn" type="button" data-filter="ambiente" aria-pressed="false">Ambiente</button></li>
+              <li><button class="filter-btn" type="button" data-filter="cucina" aria-pressed="false">Cucina</button></li>
+            </ul>
+          </div>
+          <p class="gallery-page__count" data-filter-status="galleria" data-noun="fotografie" aria-live="polite"></p>
+        </div>
+
+        <ul class="masonry" data-filter-target="galleria" role="list">
+          <li data-category="piatti">
+            <a class="g-item js-lightbox" data-lightbox="galleria" href="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&amp;fit=max&amp;w=1800&amp;q=80" data-caption="Dim sum al vapore">
+              <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;q=72" width="800" height="600" loading="lazy" decoding="async" alt="Cestini di bambù con ravioli cotti al vapore su un tavolo scuro">
+              <span class="g-item__caption"><span><span class="g-item__cat">Piatti</span>Dim sum al vapore</span><span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+            </a>
+          </li>
+          <li data-category="cucina">
+            <a class="g-item js-lightbox" data-lightbox="galleria" href="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&amp;fit=max&amp;w=1800&amp;q=80" data-caption="Il passe">
+              <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=72" width="800" height="1000" loading="lazy" decoding="async" alt="Un cuoco al lavoro in cucina sotto le lampade riscaldanti">
+              <span class="g-item__caption"><span><span class="g-item__cat">Cucina</span>Il passe</span><span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+            </a>
+          </li>
+          <li data-category="ambiente">
+            <a class="g-item js-lightbox" data-lightbox="galleria" href="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=max&amp;w=1800&amp;q=80" data-caption="La sala">
+              <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=800&amp;h=560&amp;q=72" width="800" height="560" loading="lazy" decoding="async" alt="Sala di un ristorante con tavoli apparecchiati e luci soffuse">
+              <span class="g-item__caption"><span><span class="g-item__cat">Ambiente</span>La sala</span><span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+            </a>
+          </li>
+          <li data-category="piatti">
+            <a class="g-item js-lightbox" data-lightbox="galleria" href="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&amp;fit=max&amp;w=1800&amp;q=80" data-caption="Panini al vapore">
+              <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=72" width="800" height="1000" loading="lazy" decoding="async" alt="Panini al vapore dorati serviti su un piatto con salse in ciotoline">
+              <span class="g-item__caption"><span><span class="g-item__cat">Piatti</span>Panini al vapore</span><span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+            </a>
+          </li>
+          <li data-category="cucina">
+            <a class="g-item js-lightbox" data-lightbox="galleria" href="https://images.unsplash.com/photo-1528712306091-ed0763094c98?auto=format&amp;fit=max&amp;w=1800&amp;q=80" data-caption="Al wok">
+              <img src="https://images.unsplash.com/photo-1528712306091-ed0763094c98?auto=format&amp;fit=crop&amp;w=800&amp;h=900&amp;q=72" width="800" height="900" loading="lazy" decoding="async" alt="Noodles saltati in padella con una spatola durante la preparazione">
+              <span class="g-item__caption"><span><span class="g-item__cat">Cucina</span>Al wok</span><span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+            </a>
+          </li>
+          <li data-category="piatti">
+            <a class="g-item js-lightbox" data-lightbox="galleria" href="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&amp;fit=max&amp;w=1800&amp;q=80" data-caption="Noodles saltati">
+              <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&amp;fit=crop&amp;w=800&amp;h=800&amp;q=72" width="800" height="800" loading="lazy" decoding="async" alt="Noodles saltati con verdure su un piatto con le bacchette">
+              <span class="g-item__caption"><span><span class="g-item__cat">Piatti</span>Noodles saltati</span><span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+            </a>
+          </li>
+          <li data-category="ambiente">
+            <a class="g-item js-lightbox" data-lightbox="galleria" href="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=max&amp;w=1800&amp;q=80" data-caption="La tavola">
+              <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=72" width="800" height="1000" loading="lazy" decoding="async" alt="Tavola apparecchiata con piatti, bicchieri e candele in una sala calda">
+              <span class="g-item__caption"><span><span class="g-item__cat">Ambiente</span>La tavola</span><span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+            </a>
+          </li>
+          <li data-category="piatti">
+            <a class="g-item js-lightbox" data-lightbox="galleria" href="https://images.unsplash.com/photo-1623689046286-01d812cc8bad?auto=format&amp;fit=max&amp;w=1800&amp;q=80" data-caption="Agrodolce">
+              <img src="https://images.unsplash.com/photo-1623689046286-01d812cc8bad?auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;q=72" width="800" height="600" loading="lazy" decoding="async" alt="Bocconcini in salsa agrodolce con peperoni e semi di sesamo">
+              <span class="g-item__caption"><span><span class="g-item__cat">Piatti</span>Agrodolce</span><span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+            </a>
+          </li>
+          <li data-category="cucina">
+            <a class="g-item js-lightbox" data-lightbox="galleria" href="https://images.unsplash.com/photo-1572715376701-98568319fd0b?auto=format&amp;fit=max&amp;w=1800&amp;q=80" data-caption="L'impiattamento">
+              <img src="https://images.unsplash.com/photo-1572715376701-98568319fd0b?auto=format&amp;fit=crop&amp;w=800&amp;h=800&amp;q=72" width="800" height="800" loading="lazy" decoding="async" alt="Mani che completano l'impiattamento di una portata">
+              <span class="g-item__caption"><span><span class="g-item__cat">Cucina</span>L'impiattamento</span><span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+            </a>
+          </li>
+          <li data-category="piatti">
+            <a class="g-item js-lightbox" data-lightbox="galleria" href="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&amp;fit=max&amp;w=1800&amp;q=80" data-caption="Ravioli della tradizione">
+              <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=72" width="800" height="1000" loading="lazy" decoding="async" alt="Ravioli cinesi di diverse forme serviti in ciotole su un tavolo di legno">
+              <span class="g-item__caption"><span><span class="g-item__cat">Piatti</span>Ravioli della tradizione</span><span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+            </a>
+          </li>
+          <li data-category="ambiente">
+            <a class="g-item js-lightbox" data-lightbox="galleria" href="https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&amp;fit=max&amp;w=1800&amp;q=80" data-caption="Dettagli">
+              <img src="https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&amp;fit=crop&amp;w=800&amp;h=800&amp;q=72" width="800" height="800" loading="lazy" decoding="async" alt="Ciotola di riso bianco con bacchette su una tavola scura">
+              <span class="g-item__caption"><span><span class="g-item__cat">Ambiente</span>Dettagli</span><span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+            </a>
+          </li>
+          <li data-category="piatti">
+            <a class="g-item js-lightbox" data-lightbox="galleria" href="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&amp;fit=max&amp;w=1800&amp;q=80" data-caption="Noodles e gamberi">
+              <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&amp;fit=crop&amp;w=800&amp;h=600&amp;q=72" width="800" height="600" loading="lazy" decoding="async" alt="Noodles saltati con gamberi e pomodorini in una padella scura">
+              <span class="g-item__caption"><span><span class="g-item__cat">Piatti</span>Noodles e gamberi</span><span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+            </a>
+          </li>
+          <li data-category="ambiente">
+            <a class="g-item js-lightbox" data-lightbox="galleria" href="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&amp;fit=max&amp;w=1800&amp;q=80" data-caption="Gli spazi">
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&amp;fit=crop&amp;w=800&amp;h=560&amp;q=72" width="800" height="560" loading="lazy" decoding="async" alt="Sala luminosa di un ristorante con tavoli in legno e grandi vetrate">
+              <span class="g-item__caption"><span><span class="g-item__cat">Ambiente</span>Gli spazi</span><span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+            </a>
+          </li>
+          <li data-category="piatti">
+            <a class="g-item js-lightbox" data-lightbox="galleria" href="https://images.unsplash.com/photo-1617622141675-d3005b9067c5?auto=format&amp;fit=max&amp;w=1800&amp;q=80" data-caption="Con le bacchette">
+              <img src="https://images.unsplash.com/photo-1617622141675-d3005b9067c5?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=72" width="800" height="1000" loading="lazy" decoding="async" alt="Ciotola di noodles saltati sollevati con le bacchette">
+              <span class="g-item__caption"><span><span class="g-item__cat">Piatti</span>Con le bacchette</span><span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+            </a>
+          </li>
+          <li data-category="piatti">
+            <a class="g-item js-lightbox" data-lightbox="galleria" href="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&amp;fit=max&amp;w=1800&amp;q=80" data-caption="Riso saltato">
+              <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&amp;fit=crop&amp;w=800&amp;h=640&amp;q=72" width="800" height="640" loading="lazy" decoding="async" alt="Riso saltato con verdure ed erbe in una padella scura">
+              <span class="g-item__caption"><span><span class="g-item__cat">Piatti</span>Riso saltato</span><span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+            </a>
+          </li>
+          <li data-category="piatti">
+            <a class="g-item js-lightbox" data-lightbox="galleria" href="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&amp;fit=max&amp;w=1800&amp;q=80" data-caption="Zuppa con noodles">
+              <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?auto=format&amp;fit=crop&amp;w=800&amp;h=800&amp;q=72" width="800" height="800" loading="lazy" decoding="async" alt="Ciotola di zuppa con noodles, carne e verdure a foglia">
+              <span class="g-item__caption"><span><span class="g-item__cat">Piatti</span>Zuppa con noodles</span><span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== CTA FINALE ===================== -->
+    <section class="section cta-band theme-dark" aria-labelledby="cta-title" style="border-top:1px solid var(--line-on-dark)">
+      <div class="container cta-band__inner">
+        <div class="cta-band__content">
+          <p class="eyebrow reveal">Ti aspettiamo</p>
+          <h2 id="cta-title" class="reveal" style="--delay:.05s">Dalle immagini <em>alla tavola</em></h2>
+          <p class="lead reveal" style="--delay:.1s">Scopri il menu completo oppure contattaci per prenotare il tuo tavolo.</p>
+        </div>
+        <div class="cta-band__actions reveal" style="--delay:.15s">
+          <a class="btn btn--primary" href="index.html#contatti" data-config="booking">
+            Prenota un tavolo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+          </a>
+          <a class="btn btn--ghost" href="menu.html">Consulta il menu</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="logo" href="index.html" aria-label="La Pagoda, torna alla home">
+            <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+              <path d="M20 2.5V7"/>
+              <path d="M9.5 13.5C13.5 12.9 17.1 10.5 20 7c2.9 3.5 6.5 5.9 10.5 6.5"/>
+              <path d="M13.5 13.5V18M26.5 13.5V18"/>
+              <path d="M5.5 23c4-.6 6.5-2.6 8-5h13c1.5 2.4 4 4.4 8 5"/>
+              <path d="M9.5 23v5M30.5 23v5"/>
+              <path d="M2.5 32.5c4-.6 6-2.4 7-4.5h21c1 2.1 3 3.9 7 4.5"/>
+              <path d="M6.5 32.5v5h27v-5"/>
+              <path d="M17.5 37.5V34h5v3.5"/>
+            </svg>
+            <span class="logo__text">
+              <span class="logo__name">La Pagoda</span>
+              <span class="logo__tag">Ristorante cinese</span>
+            </span>
+          </a>
+          <p>Cucina cinese della tradizione, ingredienti selezionati e piatti da condividere, in un ambiente accogliente.</p>
+          <ul class="social" data-social role="list" aria-label="Profili social">
+            <li><a data-social-link="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram (si apre in una nuova scheda)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+            <li><a data-social-link="facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook (si apre in una nuova scheda)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></a></li>
+            <li><a data-social-link="tripadvisor" target="_blank" rel="noopener noreferrer" aria-label="Tripadvisor (si apre in una nuova scheda)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="13" r="3.5"/><circle cx="17" cy="13" r="3.5"/><path d="M3 9c5-3 13-3 18 0M12 9.5V13"/></svg></a></li>
+          </ul>
+        </div>
+
+        <nav aria-label="Navigazione rapida">
+          <h2 class="footer__title">Esplora</h2>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#specialita">Specialità</a></li>
+            <li><a href="index.html#storia">La storia</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="galleria.html" aria-current="page">Galleria</a></li>
+            <li><a href="index.html#contatti">Contatti</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="footer__title">Contatti</h2>
+          <div class="footer__contacts">
+            <address data-config="address">[Indirizzo del ristorante]</address>
+            <a data-config="phone">[Numero di telefono]</a>
+            <a data-config="email">[Indirizzo email]</a>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="footer__title">Orari</h2>
+          <ul class="hours" data-config="hours" role="list">
+            <li><span>Pranzo</span><span>[Da inserire]</span></li>
+            <li><span>Cena</span><span>[Da inserire]</span></li>
+            <li><span>Chiusura</span><span>[Da inserire]</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> La Pagoda. Tutti i diritti riservati.</p>
+        <ul class="footer__legal" role="list">
+          <li>P. IVA [da inserire]</li>
+          <li>Privacy Policy [da inserire]</li>
+          <li>Cookie Policy [da inserire]</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Torna su">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

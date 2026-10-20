@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Pagoda — Ristorante cinese · Tradizione e sapori autentici</title>
+  <meta name="description" content="La Pagoda, ristorante cinese: cucina della tradizione, ingredienti selezionati e un'accoglienza pensata per la convivialità. Scopri le specialità, il menu e prenota il tuo tavolo.">
+  <meta name="theme-color" content="#171717">
+
+  <!-- Open Graph — sostituire og:image con una fotografia reale del ristorante; aggiungere og:url quando il dominio è attivo -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="La Pagoda">
+  <meta property="og:title" content="La Pagoda — Ristorante cinese">
+  <meta property="og:description" content="Un viaggio nei sapori della Cina: tradizione, ingredienti selezionati e passione per la cucina cinese.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1200&h=630&q=75">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!--
+    Dati strutturati: contengono SOLO informazioni certe (nome e tipo di cucina).
+    Quando i dati sono verificati, aggiungere: "address" (PostalAddress), "telephone",
+    "url", "image", "openingHoursSpecification", "menu": "menu.html", "geo".
+  -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "La Pagoda",
+    "servesCuisine": "Cinese"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Vai al contenuto</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html" aria-label="La Pagoda, torna alla home">
+        <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+          <path d="M20 2.5V7"/>
+          <path d="M9.5 13.5C13.5 12.9 17.1 10.5 20 7c2.9 3.5 6.5 5.9 10.5 6.5"/>
+          <path d="M13.5 13.5V18M26.5 13.5V18"/>
+          <path d="M5.5 23c4-.6 6.5-2.6 8-5h13c1.5 2.4 4 4.4 8 5"/>
+          <path d="M9.5 23v5M30.5 23v5"/>
+          <path d="M2.5 32.5c4-.6 6-2.4 7-4.5h21c1 2.1 3 3.9 7 4.5"/>
+          <path d="M6.5 32.5v5h27v-5"/>
+          <path d="M17.5 37.5V34h5v3.5"/>
+        </svg>
+        <span class="logo__text">
+          <span class="logo__name">La Pagoda</span>
+          <span class="logo__tag">Ristorante cinese</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Apri il menu di navigazione">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav" id="primary-nav" aria-label="Navigazione principale">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="nav__link" href="#specialita">Specialità</a></li>
+          <li><a class="nav__link" href="#storia">La storia</a></li>
+          <li><a class="nav__link" href="menu.html">Menu</a></li>
+          <li><a class="nav__link" href="galleria.html">Galleria</a></li>
+          <li><a class="nav__link" href="#contatti">Contatti</a></li>
+        </ul>
+        <a class="btn btn--primary btn--sm nav__cta" href="#contatti">Prenota un tavolo</a>
+        <div class="nav__footer">
+          <a data-config="phone">[Numero di telefono]</a>
+          <a data-config="email">[Indirizzo email]</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="nav-overlay" aria-hidden="true"></div>
+
+  <main id="main">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero__media">
+        <!-- IMMAGINE DIMOSTRATIVA: sostituire con una fotografia del ristorante (es. img/hero.webp) -->
+        <img
+          src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1600&h=1067&q=75"
+          srcset="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=960&h=640&q=70 960w,
+                  https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1600&h=1067&q=75 1600w,
+                  https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=2400&h=1600&q=75 2400w"
+          sizes="100vw"
+          width="1600" height="1067"
+          alt="Cestini di bambù con ravioli cotti al vapore su un tavolo scuro"
+          fetchpriority="high" decoding="async">
+      </div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <span class="hero__wordmark" aria-hidden="true">LA PAGODA</span>
+          <p class="eyebrow">Tradizione cinese · Sapori autentici</p>
+          <h1 id="hero-title">Un viaggio nei <em>sapori</em> della Cina</h1>
+          <p class="hero__lead">Tradizione, ingredienti selezionati e passione per la cucina cinese, in un'esperienza da condividere.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="menu.html">
+              Scopri il menu
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#storia">La nostra storia</a>
+          </div>
+        </div>
+
+        <div class="hero__seal" aria-hidden="true">
+          <span class="hero__seal-line"></span>
+          <span class="seal">宝塔</span>
+          <span class="hero__seal-line"></span>
+        </div>
+      </div>
+
+      <div class="hero__meta">
+        <div class="container">
+          <a class="scroll-cue" href="#specialita">
+            <span class="scroll-cue__track" aria-hidden="true"></span>
+            Scorri
+          </a>
+          <p class="hero__note">Cucina · Convivialità · Accoglienza</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SPECIALITÀ ===================== -->
+    <!--
+      CONTENUTI DIMOSTRATIVI: piatti, descrizioni e fotografie sono esempi
+      da sostituire con le specialità reali del ristorante.
+      Per aggiungere un prezzo verificato, inserire nel blocco .dish__meta:
+      <span class="menu-item__price">€ 00,00</span>
+    -->
+    <section class="section specialties" id="specialita" aria-labelledby="specialita-title">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <div class="reveal">
+            <p class="eyebrow">Dalla nostra cucina</p>
+            <h2 id="specialita-title" style="margin-top:1.25rem">Le nostre <em>specialità</em></h2>
+          </div>
+          <div class="section-head__aside reveal" style="--delay:.1s">
+            <p class="lead">Sapori che raccontano una tradizione. Una selezione di piatti da scoprire, preparati ogni giorno con cura e pensati per essere condivisi.</p>
+            <a class="link-arrow" href="menu.html">
+              Scopri tutto il menu
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </header>
+
+        <div class="specialties__grid">
+          <!-- Piatto 01 — DEMO -->
+          <article class="dish dish--feature reveal reveal--scale">
+            <div class="dish__media">
+              <img src="https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=1100&h=1300&q=75"
+                   width="1100" height="1300" loading="lazy" decoding="async"
+                   alt="Ravioli cinesi al vapore di diverse forme serviti in ciotole su un tavolo di legno">
+            </div>
+            <div class="dish__body">
+              <div class="dish__meta">
+                <span class="dish__index">01</span>
+                <span class="dish__tag">Tradizione</span>
+              </div>
+              <h3>Ravioli al vapore</h3>
+              <p>Sfoglia sottile chiusa a mano e cottura al vapore nel cestino di bambù: un classico da condividere a inizio pasto.</p>
+            </div>
+          </article>
+
+          <!-- Piatto 02 — DEMO -->
+          <article class="dish dish--side reveal" style="--delay:.1s">
+            <div class="dish__media">
+              <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=900&h=563&q=75"
+                   width="900" height="563" loading="lazy" decoding="async"
+                   alt="Noodles saltati con verdure serviti su un piatto con le bacchette">
+            </div>
+            <div class="dish__body">
+              <div class="dish__meta">
+                <span class="dish__index">02</span>
+                <span class="dish__tag">Wok</span>
+              </div>
+              <h3>Noodles saltati al wok</h3>
+              <p>Fiamma viva e gesti rapidi per una consistenza perfetta e profumi intensi.</p>
+            </div>
+          </article>
+
+          <!-- Piatto 03 — DEMO -->
+          <article class="dish dish--side reveal" style="--delay:.2s">
+            <div class="dish__media">
+              <img src="https://images.unsplash.com/photo-1623689046286-01d812cc8bad?auto=format&fit=crop&w=900&h=563&q=75"
+                   width="900" height="563" loading="lazy" decoding="async"
+                   alt="Bocconcini in salsa agrodolce lucida con peperoni e semi di sesamo">
+            </div>
+            <div class="dish__body">
+              <div class="dish__meta">
+                <span class="dish__index">03</span>
+                <span class="dish__tag">Classici</span>
+              </div>
+              <h3>Agrodolce della casa</h3>
+              <p>L'equilibrio tra dolce e acido che ha reso celebre la cucina cinese nel mondo.</p>
+            </div>
+          </article>
+
+          <!-- Piatto 04 — DEMO -->
+          <article class="dish dish--wide reveal">
+            <div class="dish__media">
+              <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=1300&h=800&q=75"
+                   width="1300" height="800" loading="lazy" decoding="async"
+                   alt="Panini al vapore dorati serviti su un piatto con salse in ciotoline">
+            </div>
+            <div class="dish__body">
+              <div class="dish__meta">
+                <span class="dish__index">04</span>
+                <span class="dish__tag">Da condividere</span>
+              </div>
+              <h3>Panini al vapore</h3>
+              <p>Morbidi e soffici, accompagnati da salse per intingere: perfetti da dividere al centro della tavola, come vuole la tradizione.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="specialties__footer reveal">
+          <a class="btn btn--outline" href="menu.html">
+            Scopri tutto il menu
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== LA STORIA ===================== -->
+    <!-- Testo istituzionale neutro: personalizzare con la storia reale del locale -->
+    <section class="story theme-dark" id="storia" aria-labelledby="storia-title">
+      <div class="story__media reveal reveal--fade">
+        <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&h=1100&q=75"
+             srcset="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&h=700&q=72 800w,
+                     https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=1200&h=1100&q=75 1200w"
+             sizes="(max-width: 900px) 100vw, 50vw"
+             width="1200" height="1100" loading="lazy" decoding="async"
+             alt="Un cuoco al lavoro in cucina sotto le lampade riscaldanti del passe">
+        <span class="seal story__seal" aria-hidden="true">宝塔</span>
+      </div>
+
+      <div class="story__panel">
+        <div class="story__inner">
+          <p class="eyebrow reveal">La nostra storia</p>
+          <h2 id="storia-title" class="reveal" style="--delay:.05s">La passione per la cucina cinese, <em>a tavola</em></h2>
+          <p class="story__lead reveal" style="--delay:.1s">Portiamo in tavola la ricchezza della cucina cinese: ricette della tradizione, gesti precisi e ingredienti scelti con attenzione.</p>
+
+          <blockquote class="story__quote reveal" style="--delay:.15s">
+            <p>Un piatto al centro del tavolo, da condividere: per noi la cucina è prima di tutto un incontro.</p>
+          </blockquote>
+
+          <ul class="pillars reveal" style="--delay:.2s" role="list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 5.5a3 3 0 0 1 0 5M18 14c2 .8 3 2.8 3 6"/></svg>
+              Convivialità
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+              Cura
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19C5 11 10 5 20 5c0 10-6 15-14 15"/><path d="M5 19l8-8"/></svg>
+              Ingredienti
+            </li>
+          </ul>
+
+          <a class="btn btn--primary reveal" href="#contatti">
+            Vieni a trovarci
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BANNER ===================== -->
+    <section class="banner" aria-label="Ogni piatto, un incontro di sapori">
+      <div class="banner__media" data-parallax>
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&h=1200&q=70"
+             srcset="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=960&h=800&q=70 960w,
+                     https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1920&h=1200&q=70 1920w"
+             sizes="100vw" width="1920" height="1200" loading="lazy" decoding="async"
+             alt="Tavola apparecchiata con piatti, bicchieri e candele in una sala calda e soffusa">
+      </div>
+      <div class="container banner__content">
+        <span class="banner__rule" aria-hidden="true"><span></span></span>
+        <p class="banner__quote reveal">Ogni piatto, un incontro di sapori</p>
+        <span class="banner__rule" aria-hidden="true"><span></span></span>
+      </div>
+    </section>
+
+    <!-- ===================== MENU ===================== -->
+    <section class="section menu-intro theme-dark" aria-labelledby="menu-title">
+      <div class="container menu-intro__grid">
+        <div class="menu-intro__content">
+          <p class="eyebrow reveal">Il nostro menu</p>
+          <h2 id="menu-title" class="reveal" style="--delay:.05s">Scopri i sapori de <em>La Pagoda</em></h2>
+          <p class="lead reveal" style="--delay:.1s">Dagli antipasti al vapore ai piatti saltati al wok, fino ai dolci: un percorso tra i grandi classici della cucina cinese, da comporre come preferisci.</p>
+          <ul class="menu-intro__cats reveal" style="--delay:.15s" role="list">
+            <li>Antipasti</li>
+            <li>Riso e noodles</li>
+            <li>Wok</li>
+            <li>Dolci</li>
+          </ul>
+          <a class="btn btn--light reveal" href="menu.html">
+            Consulta il menu completo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="menu-intro__visual reveal reveal--scale">
+          <span class="menu-intro__ring" aria-hidden="true"></span>
+          <figure class="menu-intro__plate">
+            <img src="https://images.unsplash.com/photo-1617093727343-374698b1b08d?auto=format&fit=crop&w=900&h=900&q=75"
+                 width="900" height="900" loading="lazy" decoding="async"
+                 alt="Ciotola di noodles in brodo vista dall'alto, con bacchette appoggiate sul bordo">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GALLERIA ===================== -->
+    <section class="section gallery-home theme-dark" aria-labelledby="galleria-title">
+      <div class="container">
+        <header class="section-head section-head--split">
+          <div class="reveal">
+            <p class="eyebrow">Galleria</p>
+            <h2 id="galleria-title" style="margin-top:1.25rem">Un assaggio <em>con gli occhi</em></h2>
+          </div>
+          <div class="section-head__aside reveal" style="--delay:.1s">
+            <p class="lead">Piatti, spazi e gesti di cucina: uno sguardo su ciò che vi aspetta a La Pagoda.</p>
+          </div>
+        </header>
+
+        <div class="gallery-mosaic">
+          <a class="g-item js-lightbox reveal" data-lightbox="home" href="https://images.unsplash.com/photo-1528712306091-ed0763094c98?auto=format&fit=max&w=1800&q=80" data-caption="Preparazioni in cucina">
+            <img src="https://images.unsplash.com/photo-1528712306091-ed0763094c98?auto=format&fit=crop&w=900&h=1000&q=75"
+                 width="900" height="1000" loading="lazy" decoding="async"
+                 alt="Noodles saltati in padella con una spatola durante la preparazione">
+            <span class="g-item__caption">Preparazioni in cucina <span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+          </a>
+          <a class="g-item js-lightbox reveal" style="--delay:.08s" data-lightbox="home" href="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=max&w=1800&q=80" data-caption="L'ambiente">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&h=600&q=75"
+                 width="1200" height="600" loading="lazy" decoding="async"
+                 alt="Sala di un ristorante con tavoli apparecchiati e luci soffuse">
+            <span class="g-item__caption">L'ambiente <span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+          </a>
+          <a class="g-item js-lightbox reveal" style="--delay:.16s" data-lightbox="home" href="https://images.unsplash.com/photo-1617622141675-d3005b9067c5?auto=format&fit=max&w=1800&q=80" data-caption="I nostri piatti">
+            <img src="https://images.unsplash.com/photo-1617622141675-d3005b9067c5?auto=format&fit=crop&w=600&h=600&q=75"
+                 width="600" height="600" loading="lazy" decoding="async"
+                 alt="Ciotola di noodles saltati sollevati con le bacchette">
+            <span class="g-item__caption">I piatti <span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+          </a>
+          <a class="g-item js-lightbox reveal" style="--delay:.24s" data-lightbox="home" href="https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=max&w=1800&q=80" data-caption="Dettagli a tavola">
+            <img src="https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=600&h=600&q=75"
+                 width="600" height="600" loading="lazy" decoding="async"
+                 alt="Ciotola di riso bianco con bacchette su una tavola scura">
+            <span class="g-item__caption">Dettagli <span class="g-item__zoom" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></span>
+          </a>
+        </div>
+
+        <div class="gallery-home__footer">
+          <a class="link-arrow" href="galleria.html">
+            Esplora la galleria
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTATTI ===================== -->
+    <!-- I dati si compilano in SITE_CONFIG all'inizio di script.js -->
+    <section class="section contact" id="contatti" aria-labelledby="contatti-title">
+      <div class="container contact__grid">
+        <div class="contact__info">
+          <p class="eyebrow reveal">Contatti</p>
+          <h2 id="contatti-title" class="reveal" style="--delay:.05s">Ti aspettiamo <em>a tavola</em></h2>
+          <p class="lead reveal" style="--delay:.1s">Per prenotare un tavolo, organizzare una cena di gruppo o chiedere informazioni sul menu, contattaci: saremo felici di accoglierti.</p>
+
+          <ul class="contact-list reveal" style="--delay:.15s" role="list">
+            <li class="contact-list__item">
+              <span class="contact-list__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              </span>
+              <div>
+                <span class="contact-list__label">Indirizzo</span>
+                <address class="contact-list__value" data-config="address">[Indirizzo del ristorante]</address>
+              </div>
+            </li>
+            <li class="contact-list__item">
+              <span class="contact-list__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+              </span>
+              <div>
+                <span class="contact-list__label">Telefono</span>
+                <a class="contact-list__value" data-config="phone">[Numero di telefono]</a>
+              </div>
+            </li>
+            <li class="contact-list__item">
+              <span class="contact-list__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+              </span>
+              <div>
+                <span class="contact-list__label">Email</span>
+                <a class="contact-list__value" data-config="email">[Indirizzo email]</a>
+              </div>
+            </li>
+            <li class="contact-list__item">
+              <span class="contact-list__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+              </span>
+              <div>
+                <span class="contact-list__label">Orari di apertura</span>
+                <ul class="hours" data-config="hours" role="list">
+                  <li><span>Pranzo</span><span>[Orari da inserire]</span></li>
+                  <li><span>Cena</span><span>[Orari da inserire]</span></li>
+                  <li><span>Giorno di chiusura</span><span>[Da inserire]</span></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+
+          <div class="contact__actions reveal">
+            <a class="btn btn--primary" href="#contatti" data-config="booking">
+              Prenota un tavolo
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--outline" data-config="directions" target="_blank" rel="noopener noreferrer" hidden>
+              Indicazioni stradali
+            </a>
+            <a class="btn btn--outline" data-config="whatsapp" target="_blank" rel="noopener noreferrer" hidden>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="contact__map reveal reveal--fade">
+          <div class="map" data-map>
+            <iframe title="Mappa con la posizione del ristorante La Pagoda" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen hidden></iframe>
+            <div class="map__placeholder">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+              <strong>Mappa del ristorante</strong>
+              <p>Segnaposto: inserire l'indirizzo o l'URL di incorporamento di Google Maps in <code>SITE_CONFIG</code>, all'inizio del file <code>script.js</code>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="logo" href="index.html" aria-label="La Pagoda, torna alla home">
+            <svg class="logo__mark" viewBox="0 0 40 40" aria-hidden="true">
+              <path d="M20 2.5V7"/>
+              <path d="M9.5 13.5C13.5 12.9 17.1 10.5 20 7c2.9 3.5 6.5 5.9 10.5 6.5"/>
+              <path d="M13.5 13.5V18M26.5 13.5V18"/>
+              <path d="M5.5 23c4-.6 6.5-2.6 8-5h13c1.5 2.4 4 4.4 8 5"/>
+              <path d="M9.5 23v5M30.5 23v5"/>
+              <path d="M2.5 32.5c4-.6 6-2.4 7-4.5h21c1 2.1 3 3.9 7 4.5"/>
+              <path d="M6.5 32.5v5h27v-5"/>
+              <path d="M17.5 37.5V34h5v3.5"/>
+            </svg>
+            <span class="logo__text">
+              <span class="logo__name">La Pagoda</span>
+              <span class="logo__tag">Ristorante cinese</span>
+            </span>
+          </a>
+          <p>Cucina cinese della tradizione, ingredienti selezionati e piatti da condividere, in un ambiente accogliente.</p>
+          <ul class="social" data-social role="list" aria-label="Profili social">
+            <li><a data-social-link="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram (si apre in una nuova scheda)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a></li>
+            <li><a data-social-link="facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook (si apre in una nuova scheda)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></a></li>
+            <li><a data-social-link="tripadvisor" target="_blank" rel="noopener noreferrer" aria-label="Tripadvisor (si apre in una nuova scheda)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="13" r="3.5"/><circle cx="17" cy="13" r="3.5"/><path d="M3 9c5-3 13-3 18 0M12 9.5V13"/></svg></a></li>
+          </ul>
+        </div>
+
+        <nav aria-label="Navigazione rapida">
+          <h2 class="footer__title">Esplora</h2>
+          <ul class="footer__links" role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#specialita">Specialità</a></li>
+            <li><a href="#storia">La storia</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="galleria.html">Galleria</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="footer__title">Contatti</h2>
+          <div class="footer__contacts">
+            <address data-config="address">[Indirizzo del ristorante]</address>
+            <a data-config="phone">[Numero di telefono]</a>
+            <a data-config="email">[Indirizzo email]</a>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="footer__title">Orari</h2>
+          <ul class="hours" data-config="hours" role="list">
+            <li><span>Pranzo</span><span>[Da inserire]</span></li>
+            <li><span>Cena</span><span>[Da inserire]</span></li>
+            <li><span>Chiusura</span><span>[Da inserire]</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© <span data-year>2026</span> La Pagoda. Tutti i diritti riservati.</p>
+        <!-- Dati legali da completare; trasformare in link quando le pagine privacy/cookie esistono -->
+        <ul class="footer__legal" role="list">
+          <li>P. IVA [da inserire]</li>
+          <li>Privacy Policy [da inserire]</li>
+          <li>Cookie Policy [da inserire]</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Torna su">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+  </button>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
